@@ -1,0 +1,105 @@
+# arc-agi3-world-models
+
+**Three attempts at the same hard problem: an agent that learns the rules of an
+unseen ARC-AGI-3 game from its own interactions, then plans inside its own
+head before spending real moves.**
+
+ARC-AGI-3 games are interactive puzzles with hidden mechanics. You don't get the
+rules — you get frames and an action budget. A good agent has to *induce a world
+model* online (what does each action do?), notice when it's uncertain, probe to
+resolve that uncertainty, and plan in simulation instead of flailing. This repo
+consolidates three independent research prototypes I built toward that goal,
+each taking a different bet on representation.
+
+> **Status.** These are honest research prototypes with **modest live scores**
+> (see below). They're published as a portfolio of *methodology and
+> engineering*, not as a leaderboard win. The novel rule-induction cores
+> (categorical world-model transfer) are summarized here but the full
+> implementations are held back pending a write-up. See
+> [What's public vs. withheld](#whats-public-vs-withheld).
+
+---
+
+## The three bets
+
+### 1. `iwm` — a clean symbolic world-model agent (stdlib-only)
+Parses frames into a typed object graph, extracts action→result deltas, induces
+compact executable transition rules, probes when uncertain, and plans in an
+internal simulator before acting. Runtime uses **only the Python standard
+library**; an offline demo runs two toy games (`key-door`, movement/pickup)
+with no network. Strong test suite (30+ tests) and a written failure analysis.
+
+**Result:** clean architecture, 0 official levels completed — the honest
+diagnosis of *why* (pixel-first deltas polluting evidence, ungrounded
+`ACTION6(0,0)`, one-example rule over-confidence) is written up in
+`docs/current_failure_analysis.md` and is, frankly, the most useful artifact.
+
+### 2. `categorical-cat` — a category-theory world model
+Reframes the world model categorically: typed scene graphs, morphisms, and a
+`WorldModel` protocol with a replay verifier. A symbolic **template rule
+proposer** induces verified transition rules offline.
+
+**Result (offline, reproducible):** the template-induced model **beats the
+identity baseline on held-out logs** (1.00 vs 0.00 exact-match) and produces
+verified rules on the exact official-run logs where an earlier LLM proposer
+produced **zero** — in microseconds per proposal instead of hundreds of LLM
+calls. **Result (live):** official score 0.0 across 11 environments / 1,978
+actions. The honest blocker (object-identity churn from content-addressed
+object ids) is documented.
+
+### 3. `tcca` — a neuro-symbolic Kaggle agent
+A competition-oriented agent (parser, typed state, causal graph, planner,
+explorer, n-gram memory) built to run **fully offline** under Kaggle
+constraints.
+
+**Result:** best of the three — **4 / 183 levels** across 25 public
+environments, aggregate ARC-AGI-3 score ≈ **0.257%** (Kaggle-normalized
+≈ 0.0026). Reliable offline benchmark harness + reproducible submission
+notebooks.
+
+## What this demonstrates
+
+- Building **world-model induction** loops from scratch (perception → delta →
+  rule → verify → plan), three different ways
+- **Rigorous offline evaluation**: replay verifiers, held-out log pairs,
+  identity/lookup baselines, ablations — not just live scorecards
+- **Honest negative-result engineering**: when live score is 0, diagnosing the
+  exact broken invariant instead of hiding it
+- Running real agents under **hard constraints** (stdlib-only; fully-offline
+  Kaggle inference)
+
+## Architecture (shared shape)
+
+```
+API frames ─▶ Parser ─▶ typed WorldState/Scene
+                          │
+                          ▼
+                    Delta extractor  (action → result)
+                          │
+                          ▼
+                    Rule inducer ─▶ executable world model
+                          │
+              ┌───────────┴───────────┐
+              ▼                        ▼
+        Probing policy            Planner (plan in simulation)
+              └───────────┬───────────┘
+                          ▼
+                      API action
+```
+
+## What's public vs. withheld
+
+| Public here | Withheld |
+|---|---|
+| Architecture, protocols, `WorldModel` interface | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
+| Offline eval harness, replay verifier, baselines | — |
+| Test suites, offline toy-game demos | — |
+| Failure analyses & result reports (real numbers) | Live API keys / scorecard credentials (never committed) |
+
+The withheld pieces are the one part I may still write up; everything needed to
+evaluate the engineering is here.
+
+## Author
+
+Kanishk Paul — [kanishkpaul.com](https://kanishkpaul.com) ·
+[github.com/kanishkpaul](https://github.com/kanishkpaul)
