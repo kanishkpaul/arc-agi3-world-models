@@ -1,5 +1,6 @@
 # arc-agi3-world-models
 
+[![tests](https://github.com/kanishkpaul/arc-agi3-world-models/actions/workflows/ci.yml/badge.svg)](https://github.com/kanishkpaul/arc-agi3-world-models/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **Three attempts at the same hard problem: an agent that learns the rules of an
