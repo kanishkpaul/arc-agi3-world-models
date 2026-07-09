@@ -1,8 +1,15 @@
 # arc-agi3-world-models
 
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Three attempts at the same hard problem: an agent that learns the rules of an
 unseen ARC-AGI-3 game from its own interactions, then plans inside its own
 head before spending real moves.**
+
+> Part of a research series — see also
+> [register-obstruction](https://github.com/kanishkpaul/register-obstruction) and
+> [butterflygate](https://github.com/kanishkpaul/butterflygate) ·
+> write-ups at [kanishkpaul.com/research](https://kanishkpaul.com/research)
 
 ARC-AGI-3 games are interactive puzzles with hidden mechanics. You don't get the
 rules — you get frames and an action budget. A good agent has to *induce a world
@@ -87,14 +94,36 @@ API frames ─▶ Parser ─▶ typed WorldState/Scene
                       API action
 ```
 
+## Run it
+
+The offline **evaluation substrate** — perception → logging → verification — is
+included and runnable (no network, no keys, no GPU). It's the well-tested
+foundation the world models plug into via a one-method `WorldModel` protocol.
+
+```bash
+pip install -e ".[dev]"
+pytest -q                        # 25 passing substrate tests
+python examples/verify_demo.py   # ReplayVerifier vs Identity / Oracle / a custom model
+```
+
+```
+world model              exact match    cell acc
+------------------------------------------------
+Oracle (ceiling)               1.000       1.000
+Identity (floor)               0.250       0.729
+```
+
+The Oracle scores 1.0 by construction — that's how the verifier validates
+itself. A real induced world model drops in the same way: implement `predict()`.
+
 ## What's public vs. withheld
 
 | Public here | Withheld |
 |---|---|
-| Architecture, protocols, `WorldModel` interface | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
-| Offline eval harness, replay verifier, baselines | — |
-| Test suites, offline toy-game demos | — |
-| Failure analyses & result reports (real numbers) | Live API keys / scorecard credentials (never committed) |
+| `arc3_substrate/` — perception, logging, `WorldModel` protocol, `ReplayVerifier` (runnable, 25 tests) | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
+| Identity / Oracle baselines + verify demo | The TCCA neuro-symbolic engine |
+| Real result numbers (0.0 / 4·183 / ≈0.257%) | iwm rule inducer + planner internals |
+| — | Live API keys / scorecard credentials (never committed) |
 
 The withheld pieces are the one part I may still write up; everything needed to
 evaluate the engineering is here.

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you reference this work, please cite it as below."
+title: "ARC-AGI-3 World Models: substrate + world-model agents"
+authors:
+  - family-names: Paul
+    given-names: Kanishk
+repository-code: "https://github.com/kanishkpaul/arc-agi3-world-models"
+url: "https://kanishkpaul.com/research"
+date-released: 2026-07-09
+license: MIT
