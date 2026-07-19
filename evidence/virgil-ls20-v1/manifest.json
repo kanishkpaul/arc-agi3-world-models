@@ -1,0 +1,46 @@
+{
+  "artifacts": {
+    "run.gif": {
+      "frames": 20,
+      "sha256": "00d5d257cc73893e84f131e3ca329323959528aed24c037303a5802377d7e650"
+    },
+    "trace.jsonl": {
+      "records": 76,
+      "sha256": "4418ec6cb81fd53b6557c65b7c12db5795df6213839ae1d7912c91cc1a344d4f"
+    }
+  },
+  "claim": "A provisional observation-derived world model planned and executed a completion of LS20 level 0 on a fresh real-game run.",
+  "run": {
+    "actions_to_first_level": 76,
+    "arc_agi_version": "0.9.9",
+    "captured_at_utc": "2026-07-19T14:02:39.430769+00:00",
+    "environment": "ls20-9607627b",
+    "first_planned_action_step": 61,
+    "levels_after": 1,
+    "levels_before": 0,
+    "official_local_score": 0.2915451895043732,
+    "planned_actions": 16,
+    "seed": 1729,
+    "stopped_reason": "agent_done",
+    "survey_actions_configured": 60
+  },
+  "schema_version": 1,
+  "scope": {
+    "demonstrates": [
+      "one public ARC-AGI-3 level transition",
+      "actions emitted from an internal model plan",
+      "replayable observed-frame and level hashes"
+    ],
+    "does_not_demonstrate": [
+      "autonomous world-model induction",
+      "cross-game generalization",
+      "leaderboard performance"
+    ]
+  },
+  "source": {
+    "commit": "9f132995c21d852c3ba0915aab425eb7a7ffcdfc",
+    "repository": "kanishkpaul/virgil",
+    "visibility": "private",
+    "world_model_provenance": "Hand-authored from recorded interaction evidence; game source was not used to author the model."
+  }
+}

@@ -28,6 +28,21 @@ each taking a different bet on representation.
 
 ---
 
+## New: auditable Virgil result
+
+Virgil is the current private follow-on to these three prototypes. On a fresh
+run of public environment `ls20-9607627b`, its provisional world model completed
+level 0 in **76 actions**: 60 survey actions, then 16 actions emitted from an
+internal model plan. The level counter advanced from 0 to 1 on the final
+planned action.
+
+The model was hand-authored from recorded interaction evidence, so this is
+evidence of model-based planning and execution, **not** autonomous induction or
+cross-game generalization. The public
+[`result card`](docs/virgil-result-card.md) includes a run GIF, artifact
+manifest, hash-chained trace, and a script that replays all 76 actions against
+the official environment without exposing the private model or planner.
+
 ## The three bets
 
 ### 1. `iwm` — a clean symbolic world-model agent (stdlib-only)
@@ -103,7 +118,7 @@ foundation the world models plug into via a one-method `WorldModel` protocol.
 
 ```bash
 pip install -e ".[dev]"
-pytest -q                        # 25 passing substrate tests
+pytest -q                        # 26 tests: substrate + evidence integrity
 python examples/verify_demo.py   # ReplayVerifier vs Identity / Oracle / a custom model
 ```
 
@@ -117,6 +132,16 @@ Identity (floor)               0.250       0.729
 The Oracle scores 1.0 by construction — that's how the verifier validates
 itself. A real induced world model drops in the same way: implement `predict()`.
 
+To replay the Virgil evidence against the official public LS20 environment:
+
+```bash
+pip install arc-agi==0.9.9
+python evidence/virgil-ls20-v1/replay_trace.py
+```
+
+This online replay verifies the observed frames and level transition. It does
+not include or reconstruct the private world model.
+
 ## What's public vs. withheld
 
 | Public here | Withheld |
@@ -124,6 +149,7 @@ itself. A real induced world model drops in the same way: implement `predict()`.
 | `arc3_substrate/` — perception, logging, `WorldModel` protocol, `ReplayVerifier` (runnable, 25 tests) | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
 | Identity / Oracle baselines + verify demo | The TCCA neuro-symbolic engine |
 | Real result numbers (0.0 / 4·183 / ≈0.257%) | iwm rule inducer + planner internals |
+| Virgil LS20 trace, GIF, manifest, and replay verifier | Virgil world model, planner, verifier, and orchestration |
 | — | Live API keys / scorecard credentials (never committed) |
 
 The withheld pieces are the one part I may still write up; everything needed to
