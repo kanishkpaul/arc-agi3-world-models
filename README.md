@@ -8,8 +8,8 @@ unseen ARC-AGI-3 game from its own interactions, then plans inside its own
 head before spending real moves.**
 
 > Part of a research series — see also
-> [register-obstruction](https://github.com/kanishkpaul/register-obstruction) and
-> [butterflygate](https://github.com/kanishkpaul/butterflygate) ·
+> [butterflygate](https://github.com/kanishkpaul/butterflygate) and
+> [resonatorlm-audit](https://github.com/kanishkpaul/resonatorlm-audit) ·
 > write-ups at [kanishkpaul.com/research](https://kanishkpaul.com/research)
 
 ARC-AGI-3 games are interactive puzzles with hidden mechanics. You don't get the
@@ -116,7 +116,11 @@ The offline **evaluation substrate** — perception → logging → verification
 included and runnable (no network, no keys, no GPU). It's the well-tested
 foundation the world models plug into via a one-method `WorldModel` protocol.
 
+Needs Python 3.11+ and `numpy`. Tested on macOS (Apple Silicon) and on
+Ubuntu in CI.
+
 ```bash
+python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 pytest -q                        # 26 tests: substrate + evidence integrity
 python examples/verify_demo.py   # ReplayVerifier vs Identity / Oracle / a custom model
@@ -140,13 +144,16 @@ python evidence/virgil-ls20-v1/replay_trace.py
 ```
 
 This online replay verifies the observed frames and level transition. It does
-not include or reconstruct the private world model.
+not include or reconstruct the private world model. It needs internet access,
+opens an anonymous scorecard, and downloads the game into `environment_files/`
+in the current directory. Re-verified on 2026-09-24: `verified 76 actions on
+ls20-9607627b: levels 0 -> 1`.
 
 ## What's public vs. withheld
 
 | Public here | Withheld |
 |---|---|
-| `arc3_substrate/` — perception, logging, `WorldModel` protocol, `ReplayVerifier` (runnable, 25 tests) | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
+| `arc3_substrate/` — perception, logging, `WorldModel` protocol, `ReplayVerifier` (runnable, 26 tests) | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
 | Identity / Oracle baselines + verify demo | The TCCA neuro-symbolic engine |
 | Real result numbers (0.0 / 4·183 / ≈0.257%) | iwm rule inducer + planner internals |
 | Virgil LS20 trace, GIF, manifest, and replay verifier | Virgil world model, planner, verifier, and orchestration |
