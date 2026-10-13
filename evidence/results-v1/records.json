@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "published_date": "2026-10-13",
+  "scope": "Sanitized historical outcome summaries; no new solver runs",
+  "score_unit": "percent",
+  "records": [
+    {
+      "id": "tcca-public25",
+      "measurement_date": "2026-04-18",
+      "date_basis": "Historical checkpoint associated with the preserved benchmark; exact capture timestamp unavailable",
+      "protocol": "offline public-game benchmark",
+      "evidence_status": "recalculable_summary",
+      "source_record": "preserved tcca_public_benchmark_summary.json",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 4,
+        "full_game_wins": 0,
+        "scoring_games": 4,
+        "score_percent": 0.25672622526556843,
+        "actions": 11217,
+        "wall_seconds": 202.55
+      },
+      "public_table": "tcca-per-game.csv"
+    },
+    {
+      "id": "iwm-interrupted",
+      "measurement_date": "2026-06-21",
+      "protocol": "interrupted official-API attempt",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved benchmark stop report",
+      "metrics": {
+        "games_touched": 4,
+        "levels_completed": 0,
+        "actions_logged": 266,
+        "score_percent": null
+      },
+      "limitation": "Local progress only; final server score unavailable"
+    },
+    {
+      "id": "categorical-cat-online",
+      "measurement_date": "2026-07-02",
+      "protocol": "online sweep stopped after 11 of 25 planned environments",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved official-run report and closed scorecard",
+      "metrics": {
+        "games_played": 11,
+        "games_planned": 25,
+        "levels_completed": 0,
+        "score_percent": 0.0,
+        "actions": 1978
+      }
+    },
+    {
+      "id": "virgil-cc-ls20",
+      "measurement_date": "2026-07-19",
+      "protocol": "single-game hand-authored-model demonstration",
+      "evidence_status": "replayable_observation_record",
+      "source_record": "existing public virgil-ls20-v1 manifest and trace",
+      "metrics": {
+        "levels_completed": 1,
+        "actions_to_first_level": 76,
+        "survey_actions": 60,
+        "planned_actions": 16
+      },
+      "public_evidence": "../virgil-ls20-v1/manifest.json"
+    },
+    {
+      "id": "virgil-cx-regression",
+      "measurement_date": "2026-07-19",
+      "protocol": "exploration and fresh-environment replay regression",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved phase-13.1 public-25 confirmation r5 report",
+      "metrics": {
+        "games": 25,
+        "scoring_games": 13,
+        "levels_completed": 16,
+        "score_percent": 2.23268,
+        "engine_calls": 61098
+      }
+    },
+    {
+      "id": "virgil-cx-competition-style",
+      "measurement_date": "2026-07-19",
+      "protocol": "notebook artifact; one construction per game; restricted level resets",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved phase-12.1 competition-public25 r1 report",
+      "metrics": {
+        "games": 25,
+        "scoring_games": 14,
+        "levels_completed": 17,
+        "score_percent": 0.561637954000069,
+        "engine_calls": 64581,
+        "wall_seconds": 983.36
+      },
+      "limitation": "Historical score gate failed; not a private-final leaderboard claim"
+    },
+    {
+      "id": "virgil-npass",
+      "measurement_date": "2026-09-12",
+      "date_basis": "Preserved experiment result record",
+      "protocol": "two substantive plays per game; discovery, replay, and per-game maximum reported separately",
+      "evidence_status": "recalculable_summary",
+      "source_record": "25 preserved per-game result.json exports",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 17,
+        "full_game_wins": 0,
+        "scoring_games": 14,
+        "discovery_mean_percent": 0.5767256260274587,
+        "replay_mean_percent": 1.3415715908037715,
+        "per_game_best_mean_percent": 1.4449537876665128,
+        "physical_actions": 127314,
+        "historical_aggregate_wall_seconds": 2655.21,
+        "sum_per_game_wall_seconds": 2641.0777022930015,
+        "replay_regression_count": 3
+      },
+      "public_table": "npass-per-game.csv",
+      "limitation": "Research-only protocol; no rules-conforming competition claim"
+    }
+  ]
+}

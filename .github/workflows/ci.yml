@@ -11,5 +11,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -e ".[dev]"
+      - run: pip install -e ".[dev]" build
       - run: pytest -q
+      - run: python scripts/verify_results.py
+      - run: python examples/verify_demo.py
+      - run: python -m build --wheel
+      - name: Check installed wheel outside the checkout
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/wheel-check"
+          "$RUNNER_TEMP/wheel-check/bin/python" -m pip install dist/*.whl
+          "$RUNNER_TEMP/wheel-check/bin/python" -I scripts/check_installed.py "$GITHUB_WORKSPACE"
+

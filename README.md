@@ -1,168 +1,101 @@
-# arc-agi3-world-models
+<p align="center">
+  <img src="assets/virgil-banner.svg" alt="Virgil — world-model experiments for ARC-AGI-3" width="1280">
+</p>
 
-[![tests](https://github.com/kanishkpaul/arc-agi3-world-models/actions/workflows/ci.yml/badge.svg)](https://github.com/kanishkpaul/arc-agi3-world-models/actions/workflows/ci.yml)
-[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <a href="https://github.com/kanishkpaul/arc-agi3-world-models/actions/workflows/ci.yml"><img src="https://github.com/kanishkpaul/arc-agi3-world-models/actions/workflows/ci.yml/badge.svg" alt="Tests"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-376653" alt="License: MIT"></a>
+  <a href="pyproject.toml"><img src="https://img.shields.io/badge/python-3.11%2B-376653" alt="Python 3.11 or newer"></a>
+</p>
 
-**Three attempts at the same hard problem: an agent that learns the rules of an
-unseen ARC-AGI-3 game from its own interactions, then plans inside its own
-head before spending real moves.**
+<p align="center">
+  <a href="#results">Results</a> ·
+  <a href="docs/README.md">Research record</a> ·
+  <a href="#run-the-public-library">Run the library</a> ·
+  <a href="docs/public-scope.md">Public scope</a>
+</p>
 
-> Part of a research series — see also
-> [butterflygate](https://github.com/kanishkpaul/butterflygate) and
-> [resonatorlm-audit](https://github.com/kanishkpaul/resonatorlm-audit) ·
-> write-ups at [kanishkpaul.com/research](https://kanishkpaul.com/research)
+# ARC-AGI-3 World Models
 
-ARC-AGI-3 games are interactive puzzles with hidden mechanics. You don't get the
-rules — you get frames and an action budget. A good agent has to *induce a world
-model* online (what does each action do?), notice when it's uncertain, probe to
-resolve that uncertainty, and plan in simulation instead of flailing. This repo
-consolidates three independent research prototypes I built toward that goal,
-each taking a different bet on representation.
+**The public results and evaluation companion to Virgil.**
 
-> **Status.** These are honest research prototypes with **modest live scores**
-> (see below). They're published as a portfolio of *methodology and
-> engineering*, not as a leaderboard win. The novel rule-induction cores
-> (categorical world-model transfer) are summarized here but the full
-> implementations are held back pending a write-up. See
-> [What's public vs. withheld](#whats-public-vs-withheld).
+How can an agent learn an unfamiliar game's rules from interaction and use a world model to choose its next move? TCCA, IWM, Categorical Cat, and Virgil explored that question through several research prototypes.
 
----
+This repository publishes their measured outcomes, evaluation conditions, and a small runnable library for perception, transition logging, and replay evaluation. The full solver implementations remain private.
 
-## New: auditable Virgil result
+> **Status · October 13, 2026**  
+> Virgil development is resuming. The results below are dated historical snapshots, with limited game completion. This update reports existing experiments; it does not announce a new solver result.
 
-Virgil is the current private follow-on to these three prototypes. On a fresh
-run of public environment `ls20-9607627b`, its provisional world model completed
-level 0 in **76 actions**: 60 survey actions, then 16 actions emitted from an
-internal model plan. The level counter advanced from 0 to 1 on the final
-planned action.
+## Results
 
-The model was hand-authored from recorded interaction evidence, so this is
-evidence of model-based planning and execution, **not** autonomous induction or
-cross-game generalization. The public
-[`result card`](docs/virgil-result-card.md) includes a run GIF, artifact
-manifest, hash-chained trace, and a script that replays all 76 actions against
-the official environment without exposing the private model or planner.
+Each score is an **action-efficiency percentage**, not the percentage of games solved. The experiments differ in implementation, budget, and replay/reset protocol; they are not a controlled leaderboard comparison.
 
-## The three bets
+| Experiment | Recorded outcome | Evaluation |
+| :--- | :--- | :--- |
+| [TCCA](docs/results/prototypes.md#tcca) | **0.2567%** · 4 / 183 levels | Offline benchmark, 25 public games |
+| [IWM](docs/results/prototypes.md#iwm) | **0 levels** · score not finalized | Interrupted API run, 4 games touched |
+| [Categorical Cat](docs/results/prototypes.md#categorical-cat) | **0.0%** · 0 levels | Online run, stopped after 11 environments |
+| [Virgil CC · LS20](docs/virgil-result-card.md) | **1 level in 76 actions** | One game; hand-authored model |
+| [Virgil CX · regression](docs/results/virgil-cx.md#research-regression) | **2.23268%** · 16 levels | Exploration and fresh replay, 25 games |
+| [Virgil CX · competition-style](docs/results/virgil-cx.md#competition-style-public-run) | **0.56164%** · 17 levels | Notebook artifact, restricted reset semantics |
+| [Virgil · N-pass](docs/results/npass.md) | **1.44495%** · 17 / 183 levels | Per-game maximum across discovery and replay |
 
-### 1. `iwm` — a clean symbolic world-model agent (stdlib-only)
-Parses frames into a typed object graph, extracts action→result deltas, induces
-compact executable transition rules, probes when uncertain, and plans in an
-internal simulator before acting. Runtime uses **only the Python standard
-library**; an offline demo runs two toy games (`key-door`, movement/pickup)
-with no network. Strong test suite (30+ tests) and a written failure analysis.
+The N-pass run won **zero full games**. Its discovery-only score was **0.57673%**; replay-only was **1.34157%**. The maximum selects each game's better play rather than describing one single pass.
 
-**Result:** clean architecture, 0 official levels completed — the honest
-diagnosis of *why* (pixel-first deltas polluting evidence, ungrounded
-`ACTION6(0,0)`, one-example rule over-confidence) is written up in
-`docs/current_failure_analysis.md` and is, frankly, the most useful artifact.
+Read the [evaluation guide](docs/evaluation.md) before comparing these numbers. Sanitized tables and summaries are in [`evidence/results-v1/`](evidence/results-v1/); the underlying solver runs are not publicly reproducible from this repository.
 
-### 2. `categorical-cat` — a category-theory world model
-Reframes the world model categorically: typed scene graphs, morphisms, and a
-`WorldModel` protocol with a replay verifier. A symbolic **template rule
-proposer** induces verified transition rules offline.
+## A replayable result
 
-**Result (offline, reproducible):** the template-induced model **beats the
-identity baseline on held-out logs** (1.00 vs 0.00 exact-match) and produces
-verified rules on the exact official-run logs where an earlier LLM proposer
-produced **zero** — in microseconds per proposal instead of hundreds of LLM
-calls. **Result (live):** official score 0.0 across 11 environments / 1,978
-actions. The honest blocker (object-identity churn from content-addressed
-object ids) is documented.
+The existing LS20 record preserves a concrete first-level completion: **60 survey actions, then 16 actions recorded as originating from a model plan**. The level counter advanced on action 76.
 
-### 3. `tcca` — a neuro-symbolic Kaggle agent
-A competition-oriented agent (parser, typed state, causal graph, planner,
-explorer, n-gram memory) built to run **fully offline** under Kaggle
-constraints.
+<p align="center">
+  <img src="evidence/virgil-ls20-v1/run.gif" alt="Recorded Virgil run completing the first LS20 level" width="384">
+</p>
 
-**Result:** best of the three — **4 / 183 levels** across 25 public
-environments, aggregate ARC-AGI-3 score ≈ **0.257%** (Kaggle-normalized
-≈ 0.0026). Reliable offline benchmark harness + reproducible submission
-notebooks.
+The model was **hand-authored from recorded interaction evidence**. This supports one model-based planning demonstration, not autonomous induction or cross-game generalization. The public trace verifies the action sequence and observations; it cannot independently prove how the private implementation generated the plan.
 
-## What this demonstrates
+[Read the result card →](docs/virgil-result-card.md)
 
-- Building **world-model induction** loops from scratch (perception → delta →
-  rule → verify → plan), three different ways
-- **Rigorous offline evaluation**: replay verifiers, held-out log pairs,
-  identity/lookup baselines, ablations — not just live scorecards
-- **Honest negative-result engineering**: when live score is 0, diagnosing the
-  exact broken invariant instead of hiding it
-- Running real agents under **hard constraints** (stdlib-only; fully-offline
-  Kaggle inference)
+## Run the public library
 
-## Architecture (shared shape)
-
-```
-API frames ─▶ Parser ─▶ typed WorldState/Scene
-                          │
-                          ▼
-                    Delta extractor  (action → result)
-                          │
-                          ▼
-                    Rule inducer ─▶ executable world model
-                          │
-              ┌───────────┴───────────┐
-              ▼                        ▼
-        Probing policy            Planner (plan in simulation)
-              └───────────┬───────────┘
-                          ▼
-                      API action
-```
-
-## Run it
-
-The offline **evaluation substrate** — perception → logging → verification — is
-included and runnable (no network, no keys, no GPU). It's the well-tested
-foundation the world models plug into via a one-method `WorldModel` protocol.
-
-Needs Python 3.11+ and `numpy`. Tested on macOS (Apple Silicon) and on
-Ubuntu in CI.
+The library runs offline with Python 3.11+ and NumPy. No API key or GPU is needed for the tests or example.
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -e ".[dev]"
-pytest -q                        # 26 tests: substrate + evidence integrity
-python examples/verify_demo.py   # ReplayVerifier vs Identity / Oracle / a custom model
+
+pytest -q
+python examples/verify_demo.py
+python scripts/verify_results.py
 ```
 
-```
-world model              exact match    cell acc
-------------------------------------------------
-Oracle (ceiling)               1.000       1.000
-Identity (floor)               0.250       0.729
-```
+The example compares an identity baseline with a recorded-answer Oracle. The Oracle validates the evaluator by returning known answers; it is not an induced model. The result script checks the arithmetic of the published historical tables, without running a solver.
 
-The Oracle scores 1.0 by construction — that's how the verifier validates
-itself. A real induced world model drops in the same way: implement `predict()`.
-
-To replay the Virgil evidence against the official public LS20 environment:
+The LS20 replay is a separate **online** command:
 
 ```bash
 pip install arc-agi==0.9.9
 python evidence/virgil-ls20-v1/replay_trace.py
 ```
 
-This online replay verifies the observed frames and level transition. It does
-not include or reconstruct the private world model. It needs internet access,
-opens an anonymous scorecard, and downloads the game into `environment_files/`
-in the current directory. Re-verified on 2026-09-24: `verified 76 actions on
-ls20-9607627b: levels 0 -> 1`.
+It opens an anonymous scorecard, downloads the public environment, and checks the recorded frame hashes and level transition. It does not reconstruct the private model or planner.
 
-## What's public vs. withheld
+## Repository guide
 
-| Public here | Withheld |
-|---|---|
-| `arc3_substrate/` — perception, logging, `WorldModel` protocol, `ReplayVerifier` (runnable, 26 tests) | Categorical rule-induction internals (`arc3_cwm/induction`, `dpo`, `transfer`) |
-| Identity / Oracle baselines + verify demo | The TCCA neuro-symbolic engine |
-| Real result numbers (0.0 / 4·183 / ≈0.257%) | iwm rule inducer + planner internals |
-| Virgil LS20 trace, GIF, manifest, and replay verifier | Virgil world model, planner, verifier, and orchestration |
-| — | Live API keys / scorecard credentials (never committed) |
+```text
+arc3_substrate/   Offline perception, logging, and replay evaluation
+assets/          README artwork
+docs/            Result cards, evaluation notes, history, public scope
+evidence/        Existing LS20 record and sanitized result tables
+examples/        Small offline demonstration
+scripts/         Published-table and installed-wheel checks
+tests/           Library, evidence-integrity, and result-table checks
+```
 
-The withheld pieces are the one part I may still write up; everything needed to
-evaluate the engineering is here.
+The full agents, generated models, planners, prompts, solution banks, and current research plans remain private during active development. This repository makes no commitment to release them. See [public scope](docs/public-scope.md) for the evidence boundary.
 
-## Author
+---
 
-Kanishk Paul — [kanishkpaul.com](https://kanishkpaul.com) ·
-[github.com/kanishkpaul](https://github.com/kanishkpaul)
+Kanishk Paul · [Research](https://kanishkpaul.com/research) · [GitHub](https://github.com/kanishkpaul)  
+Code licensed under [MIT](LICENSE). Citation metadata: [`CITATION.cff`](CITATION.cff).

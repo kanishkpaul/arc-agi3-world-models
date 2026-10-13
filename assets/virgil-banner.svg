@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="title desc">
+  <title id="title">Virgil</title>
+  <desc id="desc">World-model experiments for ARC-AGI-3. Cream typography on deep green, with an abstract arrangement of colored puzzle squares.</desc>
+  <rect width="1280" height="320" fill="#153e32"/>
+  <path d="M64 265H1216" stroke="#779b84" stroke-width="1"/>
+  <text x="62" y="157" fill="#f4f0df" font-family="Georgia, 'Times New Roman', serif" font-size="108" letter-spacing="-3">Virgil</text>
+  <text x="66" y="210" fill="#d1dfcd" font-family="Arial, Helvetica, sans-serif" font-size="25">World-model experiments for ARC-AGI-3</text>
+  <text x="66" y="295" fill="#d1dfcd" font-family="Arial, Helvetica, sans-serif" font-size="17">Public results · Evaluation substrate · Historical evidence</text>
+  <g fill="#74977d">
+    <rect x="936" y="48" width="52" height="52"/><rect x="994" y="48" width="52" height="52"/>
+    <rect x="878" y="106" width="52" height="52"/><rect x="936" y="106" width="52" height="52"/>
+    <rect x="1052" y="164" width="52" height="52"/>
+  </g>
+  <g fill="#e6bd72">
+    <rect x="994" y="106" width="52" height="52"/><rect x="1052" y="106" width="52" height="52"/>
+    <rect x="1110" y="164" width="52" height="52"/>
+  </g>
+  <g fill="#eee9d8">
+    <rect x="1052" y="48" width="52" height="52"/><rect x="1110" y="48" width="52" height="52"/>
+    <rect x="1110" y="106" width="52" height="52"/>
+  </g>
+  <rect x="936" y="164" width="52" height="52" fill="none" stroke="#98b29b" stroke-width="2"/>
+</svg>
