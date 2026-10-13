@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "bundle": "results-v1",
+  "published_date": "2026-10-13",
+  "scope": "Historical aggregate outcomes and sanitized per-game measurements only",
+  "raw_source_visibility": "private",
+  "checksums": {
+    "records.json": "b296f6097c3bd4ab5078246e4671aaef5072d2056c9d2c901210e09ebdef1f71",
+    "tcca-per-game.csv": "cb437dda2e32850fd718285bde3ce6d52441cbf6758e760f8fa9fb1237ed7d98",
+    "npass-per-game.csv": "0c89befb28a25543f04615b3ace4df3bdfc395bb439dfde4c81abce931c7662d"
+  },
+  "excludes": [
+    "solver implementations",
+    "model outputs",
+    "action sequences",
+    "credentials",
+    "source-machine paths",
+    "detailed tuning configurations",
+    "current research plans"
+  ]
+}

@@ -1,6 +1,6 @@
 [project]
 name = "arc3-substrate"
-version = "0.1.0"
+version = "0.1.1"
 description = "Offline perception -> logging -> verification substrate for ARC-AGI-3 world-model agents"
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
@@ -12,8 +12,9 @@ dev = ["pytest>=8"]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["arc3_substrate"]
+[tool.setuptools.packages.find]
+include = ["arc3_substrate*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
