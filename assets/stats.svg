@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1232" height="176" viewBox="0 0 1232 176" role="img" aria-labelledby="t d">
+<title id="t">Headline numbers</title>
+<desc id="d">ARC-AGI-1 public evaluation score, solver size, CPU per task, and Kaggle ARC Prize 2026 rank.</desc>
+<g transform="translate(0.0,0)">
+  <rect x="0.5" y="0.5" width="301" height="175" rx="18" fill="#10151c" stroke="#232b36"/>
+  <rect x="24" y="26" width="10" height="10" rx="2.5" fill="#ffc53d"/>
+  <text x="44" y="36" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">ARC-AGI-1 PUBLIC EVAL</text>
+  <text x="22" y="112" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5">70/400</text>
+  <text x="24" y="148" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16">17.5% · no weights · no LLM</text>
+</g>
+<g transform="translate(310.0,0)">
+  <rect x="0.5" y="0.5" width="301" height="175" rx="18" fill="#10151c" stroke="#232b36"/>
+  <rect x="24" y="26" width="10" height="10" rx="2.5" fill="#30a46c"/>
+  <text x="44" y="36" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">THE WHOLE SOLVER</text>
+  <text x="22" y="112" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5">84 KB</text>
+  <text x="24" y="148" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16">one C file · libc only</text>
+</g>
+<g transform="translate(620.0,0)">
+  <rect x="0.5" y="0.5" width="301" height="175" rx="18" fill="#10151c" stroke="#232b36"/>
+  <rect x="24" y="26" width="10" height="10" rx="2.5" fill="#70b8ff"/>
+  <text x="44" y="36" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">CPU PER TASK</text>
+  <text x="22" y="112" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5">0.38 s</text>
+  <text x="24" y="148" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16">161 MB peak memory</text>
+</g>
+<g transform="translate(930.0,0)">
+  <rect x="0.5" y="0.5" width="301" height="175" rx="18" fill="#10151c" stroke="#232b36"/>
+  <rect x="24" y="26" width="10" height="10" rx="2.5" fill="#e5484d"/>
+  <text x="44" y="36" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">KAGGLE ARC PRIZE 2026</text>
+  <text x="22" y="112" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5">#1,377</text>
+  <text x="24" y="148" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16">ARC-AGI-3 · of 5,012 teams</text>
+</g>
+</svg>

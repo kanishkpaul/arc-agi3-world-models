@@ -1,0 +1,10 @@
+run_id,date,entry,score_percent,rank,field_size,leaderboard
+kaggle-tcca-2026-04-05,2026-04-05,TCCA submission 1,0.17,,,kaggle_public
+kaggle-tcca-2026-04-11,2026-04-11,TCCA submission 2,0.16,,,kaggle_public
+kaggle-virgil-cc-floor-v1,2026-07-12,Virgil CC floor v1,0.21,,,kaggle_public
+kaggle-virgil-cc-floor-v2,2026-07-13,Virgil CC floor v2,0.21,,,kaggle_public
+kaggle-virgil-cx-competition,2026-09-24,Virgil CX competition-mode notebook,0.06,,,kaggle_public
+kaggle-virgil-cc-floor-v3,2026-10-30,Virgil CC floor v3 (attribution owner-reported),0.23,3492,4994,kaggle_public
+kaggle-zerostar-attempt-1,2026-10-31,Zerostar attempt 1,28.40,1377,5012,kaggle_public
+kaggle-zerostar-attempt-2,2026-11-01,Zerostar attempt 2,20.27,,,kaggle_public
+kaggle-zerostar-attempt-3,2026-11-03,Zerostar attempt 3,6.15,,,kaggle_public

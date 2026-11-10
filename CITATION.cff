@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you reference this work, please cite it as below."
-title: "ARC-AGI-3 World Models: Public Results and Evaluation Substrate"
-version: "0.1.1"
+title: "ARC Research Record: Results and Evaluation Substrate"
+version: "0.2.0"
 authors:
   - family-names: Paul
     given-names: Kanishk
 repository-code: "https://github.com/kanishkpaul/arc-agi3-world-models"
 url: "https://kanishkpaul.com/research"
-date-released: 2026-10-13
+date-released: 2026-11-10
 license: MIT
 

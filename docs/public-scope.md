@@ -2,24 +2,38 @@
 
 [← Research record](README.md)
 
-Virgil development is resuming. This repository publishes a dated results record and an evaluation library while keeping the active solver work private.
+This repository is the public record of the work until the papers are released. It publishes **what was achieved and under what conditions**. It does not publish **how**.
 
 ## Included
 
-- Historical aggregate outcomes and the conditions necessary to interpret them.
-- Sanitized TCCA and N-pass outcome tables, summary records, checksums, and arithmetic checks.
-- The existing offline perception, logging, prediction protocol, replay evaluator, baselines, tests, and example.
-- The already-public LS20 GIF, manifest, action trace, replay script, and result card.
-- Broad limitations and a short historical chronology.
+- Measured outcomes for every research line, from April to November 2026, with the conditions needed to interpret them.
+- Sanitized per-game tables, leaderboard records, aggregate records, checksums and arithmetic checks (`evidence/results-v1`, `evidence/results-v2`).
+- A live, unedited video of 0SR solving public ARC evaluation tasks.
+- The LS20 replayable trace and result card.
+- The offline perception, logging, prediction-protocol and replay-evaluation library, `arc3_substrate`, with its tests and example.
+- Figures generated from the published records.
 
-## Private
+## Private until publication
 
-Full agent implementations, induced or hand-authored world models, planners, induction logic, controllers, orchestration, prompts, detailed tuning configurations, solution banks, new action traces, and current research plans are not included.
+The following are not included:
 
-There is no commitment to release those materials. The private preservation archive is separate from this public package.
+- solver and agent source code;
+- models, whether learned or hand-authored;
+- planners, search and induction logic;
+- configurations and prompts;
+- solution banks;
+- action traces beyond LS20;
+- per-task result lists;
+- the analyses and arguments of papers in preparation.
+
+Third-party code, data and game source are never redistributed here.
+
+There is no commitment to release the private material. Paper releases will decide what becomes public.
 
 ## What can be checked
 
-The library is runnable, the existing LS20 observation record is replayable with the official environment, and the sanitized table arithmetic can be recalculated. The historical solver aggregates remain documented measurements rather than fully reproducible public algorithms.
+- The library runs, and its test suite passes in CI.
+- The LS20 record replays against the official environment.
+- Every published table recomputes to its stated aggregates, and every figure is generated from those same records.
 
-Preservation of the existing LS20 record is not a new release of private solver code. This update adds no new successful action sequences or generated models.
+The private systems themselves cannot be re-executed from this repository. Their aggregates are documented measurements, labelled with the evidence level described in the [evaluation guide](evaluation.md).

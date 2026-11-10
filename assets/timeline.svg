@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1232" height="320" viewBox="0 0 1232 320" role="img" aria-labelledby="t d">
+<title id="t">Research timeline</title>
+<desc id="d">Dated milestones of the research lines from April to November 2026.</desc>
+<rect width="1232" height="320" rx="20" fill="#10151c" stroke="#232b36"/>
+<text x="32" y="42" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">EIGHT MONTHS · SEVEN RESEARCH LINES</text>
+<path d="M48 240H1184" stroke="#232b36" stroke-width="2"/>
+<path d="M81.1 235V245" stroke="#6e7781"/>
+<text x="87.1" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">APR</text>
+<path d="M223.1 235V245" stroke="#6e7781"/>
+<text x="229.1" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">MAY</text>
+<path d="M369.9 235V245" stroke="#6e7781"/>
+<text x="375.9" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">JUN</text>
+<path d="M511.9 235V245" stroke="#6e7781"/>
+<text x="517.9" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">JUL</text>
+<path d="M658.6 235V245" stroke="#6e7781"/>
+<text x="664.6" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">AUG</text>
+<path d="M805.3 235V245" stroke="#6e7781"/>
+<text x="811.3" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">SEP</text>
+<path d="M947.3 235V245" stroke="#6e7781"/>
+<text x="953.3" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">OCT</text>
+<path d="M1094.1 235V245" stroke="#6e7781"/>
+<text x="1100.1" y="270" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">NOV</text>
+<path d="M161.6 98V232" stroke="#8b8d98" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+<circle cx="161.6" cy="240" r="6" fill="#8b8d98"/>
+<text x="169.6" y="88" text-anchor="start" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">TCCA</text>
+<text x="169.6" y="108" text-anchor="start" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">first offline benchmark</text>
+<path d="M516.6 146V232" stroke="#d6409f" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+<circle cx="516.6" cy="240" r="6" fill="#d6409f"/>
+<text x="524.6" y="136" text-anchor="start" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">IWM → Categorical Cat</text>
+<text x="524.6" y="156" text-anchor="start" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">learned-model prototypes</text>
+<path d="M597.1 98V232" stroke="#30a46c" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+<circle cx="597.1" cy="240" r="6" fill="#30a46c"/>
+<text x="605.1" y="88" text-anchor="start" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Virgil</text>
+<text x="605.1" y="108" text-anchor="start" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">LS20 level from a model plan</text>
+<path d="M857.4 194V232" stroke="#3e63dd" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+<circle cx="857.4" cy="240" r="6" fill="#3e63dd"/>
+<text x="849.4" y="184" text-anchor="end" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">N-pass</text>
+<text x="849.4" y="204" text-anchor="end" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">17 levels on 25 public games</text>
+<path d="M1084.6 98V232" stroke="#ffc53d" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+<circle cx="1084.6" cy="240" r="6" fill="#ffc53d"/>
+<text x="1076.6" y="88" text-anchor="end" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">0SR</text>
+<text x="1076.6" y="108" text-anchor="end" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">static ARC: 10 → 34 → 50 → 70 of 400</text>
+<path d="M1094.1 146V232" stroke="#e5484d" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+<circle cx="1094.1" cy="240" r="6" fill="#e5484d"/>
+<text x="1086.1" y="136" text-anchor="end" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Zerostar</text>
+<text x="1086.1" y="156" text-anchor="end" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">Kaggle #1,377 of 5,012</text>
+</svg>

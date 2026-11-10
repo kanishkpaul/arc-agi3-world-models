@@ -1,0 +1,445 @@
+{
+  "schema_version": 2,
+  "published_date": "2026-11-10",
+  "scope": "Sanitized outcome summaries: Kaggle leaderboard entries, public-game run aggregates, ARC-AGI-1 and ARC-AGI-2 public-evaluation aggregates, and a next-frame prediction study; no new solver runs",
+  "score_unit": "percent",
+  "evidence_status_values": [
+    "replayable_observation_record",
+    "recalculable_summary",
+    "documented_historical_aggregate",
+    "leaderboard_record"
+  ],
+  "leaderboards": {
+    "kaggle_public": "Kaggle public leaderboard of ARC Prize 2026 ARC-AGI-3. Kaggle re-runs each submitted notebook on hidden games, not the 25 public games; the public leaderboard shows the score on the public share of the hidden set while the competition runs. It is not the final private leaderboard."
+  },
+  "records": [
+    {
+      "id": "kaggle-tcca-2026-04-05",
+      "label": "TCCA submission 1",
+      "measurement_date": "2026-04-05",
+      "submission_date": "2026-04-05",
+      "date_basis": "Submission date in the preserved submission log",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved Kaggle submission log",
+      "metrics": {
+        "score_percent": 0.17,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "Rank and field size not recorded. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-tcca-2026-04-11",
+      "label": "TCCA submission 2",
+      "measurement_date": "2026-04-11",
+      "submission_date": "2026-04-11",
+      "date_basis": "Submission date in the preserved submission log",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved Kaggle submission log",
+      "metrics": {
+        "score_percent": 0.16,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "Rank and field size not recorded. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-virgil-cc-floor-v1",
+      "label": "Virgil CC floor v1",
+      "measurement_date": "2026-07-12",
+      "submission_date": "2026-07-12",
+      "date_basis": "Submission date in the preserved submission log",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved Kaggle submission log",
+      "metrics": {
+        "score_percent": 0.21,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "Rank and field size not recorded. Local public-game score for the same agent: public25-virgil-cc-floor-v1. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-virgil-cc-floor-v2",
+      "label": "Virgil CC floor v2",
+      "measurement_date": "2026-07-13",
+      "submission_date": "2026-07-13",
+      "date_basis": "Submission date in the preserved submission log",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved Kaggle submission log",
+      "metrics": {
+        "score_percent": 0.21,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "Rank and field size not recorded. Local public-game score for the same agent: public25-virgil-cc-floor-v2. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-virgil-cx-competition",
+      "label": "Virgil CX competition-mode notebook",
+      "measurement_date": "2026-09-24",
+      "submission_date": null,
+      "date_basis": "Score stated in a results summary dated 2026-09-24; submission date not recorded",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved results summary dated 2026-09-24",
+      "metrics": {
+        "score_percent": 0.06,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "Submission date, rank and field size not recorded, and no submission artifact is preserved; the score rests on the results summary alone. Public-game score for the same notebook: public25-virgil-cx-competition-2026-09-24. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-virgil-cc-floor-v3",
+      "label": "Virgil CC floor v3 (attribution owner-reported)",
+      "measurement_date": "2026-10-30",
+      "submission_date": null,
+      "date_basis": "Team best score and rank read from a leaderboard snapshot taken 2026-10-30; submission date not recorded",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved leaderboard snapshot of 2026-10-30 and an owner report of 2026-07-19",
+      "metrics": {
+        "score_percent": 0.23,
+        "rank": 3492,
+        "field_size": 4994
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "The snapshot establishes 0.23 as the programme's best public-leaderboard score before October 30. Attributing it to floor v3 rests on the owner's report; the submission log records v3 as pending and no v3 submission artifact is preserved. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-zerostar-attempt-1",
+      "label": "Zerostar attempt 1",
+      "measurement_date": "2026-10-31",
+      "submission_date": "2026-10-30",
+      "date_basis": "Score and rank read from the leaderboard snapshot taken after scoring; submission date in UTC",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games; notebook built on a public community baseline notebook",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved project journal and leaderboard snapshot of 2026-10-31",
+      "metrics": {
+        "score_percent": 28.4,
+        "rank": 1377,
+        "field_size": 5012
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "One draw: identical notebooks varied by several points between submissions in the same competition, so no effect is claimed for the changes made to the baseline. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-zerostar-attempt-2",
+      "label": "Zerostar attempt 2",
+      "measurement_date": "2026-11-01",
+      "submission_date": "2026-10-31",
+      "date_basis": "Score recorded when the submission completed; submission date in UTC",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games; notebook built on a public community baseline notebook",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved project journal and leaderboard snapshot of 2026-11-01",
+      "metrics": {
+        "score_percent": 20.27,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "The leaderboard ranks a team by its best entry, so this entry has no rank of its own; the team stood at rank 1413 of 5029 on 2026-11-01 on the strength of attempt 1. One draw. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "kaggle-zerostar-attempt-3",
+      "label": "Zerostar attempt 3",
+      "measurement_date": "2026-11-03",
+      "submission_date": "2026-11-01",
+      "date_basis": "Score read from the Kaggle submissions listing on 2026-11-03; submission date in UTC",
+      "protocol": "ARC Prize 2026 ARC-AGI-3 Kaggle competition submission, re-run by Kaggle on hidden games; notebook built on a public community baseline notebook",
+      "evidence_status": "leaderboard_record",
+      "leaderboard": "kaggle_public",
+      "source_record": "preserved project journal (Kaggle submissions listing of 2026-11-03)",
+      "metrics": {
+        "score_percent": 6.15,
+        "rank": null,
+        "field_size": null
+      },
+      "public_table": "kaggle-leaderboard.csv",
+      "limitation": "No rank of its own (the team's best entry remained attempt 1). The same configuration scored 49.50 on the 25 public games (public25-zerostar-r3); the hidden-game run was not diagnosed. One draw. Final private-leaderboard score not recorded in the source records"
+    },
+    {
+      "id": "public25-virgil-cc-floor-v1",
+      "label": "Virgil CC floor v1",
+      "measurement_date": "2026-07-14",
+      "date_basis": "Timestamp of the preserved comparison run log; the submission log records the same 1.79 figure on 2026-07-12",
+      "protocol": "Kaggle-style harness on the 25 public games; aggregate scorecard score",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved three-version comparison run log",
+      "metrics": {
+        "games": 25,
+        "score_percent": 1.7946897242165625,
+        "actions": 65180,
+        "sum_per_game_wall_seconds": 221.54
+      },
+      "limitation": "Per-game scores and level counts were not logged, only the aggregate scorecard score, so no per-game table exists. The harness was not preserved, so the run cannot be reproduced. The run mode probably allowed more than one play per game, so this is not a competition-mode result."
+    },
+    {
+      "id": "public25-virgil-cc-floor-v2",
+      "label": "Virgil CC floor v2",
+      "measurement_date": "2026-07-14",
+      "date_basis": "Timestamp of the preserved comparison run log; the submission log records the same 1.99 figure on 2026-07-13",
+      "protocol": "Kaggle-style harness on the 25 public games; aggregate scorecard score",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved three-version comparison run log",
+      "metrics": {
+        "games": 25,
+        "score_percent": 1.9851611351611351,
+        "actions": 87701,
+        "sum_per_game_wall_seconds": 278.85
+      },
+      "limitation": "Per-game scores and level counts were not logged, only the aggregate scorecard score, so no per-game table exists. The harness was not preserved, so the run cannot be reproduced. The run mode probably allowed more than one play per game, so this is not a competition-mode result."
+    },
+    {
+      "id": "public25-virgil-cc-floor-v3",
+      "label": "Virgil CC floor v3",
+      "measurement_date": "2026-07-14",
+      "date_basis": "Timestamp of the preserved comparison run log (full 25-game rerun; an interrupted 3-game start is excluded)",
+      "protocol": "Kaggle-style harness on the 25 public games; aggregate scorecard score",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved three-version comparison run log",
+      "metrics": {
+        "games": 25,
+        "score_percent": 2.0155844155844154,
+        "actions": 87689,
+        "sum_per_game_wall_seconds": 473.19
+      },
+      "limitation": "Per-game scores and level counts were not logged, only the aggregate scorecard score, so no per-game table exists. The harness was not preserved, so the run cannot be reproduced. The run mode probably allowed more than one play per game, so this is not a competition-mode result."
+    },
+    {
+      "id": "public25-virgil-cx-regression-2026-09-24",
+      "label": "Virgil CX regression (reproduction)",
+      "measurement_date": "2026-09-24",
+      "date_basis": "Reproduction run of code frozen on 2026-07-20; the original 2026-07-19 run gave the same mean to ten decimal places (results-v1)",
+      "protocol": "two plays per game, an exploration play then a fresh-environment replay; the official scorer keeps the better play",
+      "evidence_status": "recalculable_summary",
+      "source_record": "25 preserved per-game scorer exports with a hash list",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 16,
+        "full_game_wins": 0,
+        "scoring_games": 13,
+        "score_percent": 2.2326799259209604,
+        "median_score_percent": 0.1799845302552508,
+        "actions": 61098
+      },
+      "public_table": "public25-per-game.csv",
+      "limitation": "Research protocol with a replay play; not a competition-mode result. Actions are engine calls over both plays, resets included."
+    },
+    {
+      "id": "public25-virgil-cx-competition-2026-09-24",
+      "label": "Virgil CX competition-mode notebook (reproduction)",
+      "measurement_date": "2026-09-24",
+      "date_basis": "Reproduction run of code frozen on 2026-07-20; the original 2026-07-19 run gave the same mean to ten decimal places (results-v1)",
+      "protocol": "exact Kaggle notebook under competition rules: one play per game, level-only resets",
+      "evidence_status": "recalculable_summary",
+      "source_record": "25 preserved per-game scorer exports with a hash list",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 17,
+        "full_game_wins": 0,
+        "scoring_games": 14,
+        "score_percent": 0.561637954000069,
+        "median_score_percent": 0.0012580362594552359,
+        "actions": 64581
+      },
+      "public_table": "public25-per-game.csv",
+      "limitation": "Public games only. The same notebook scored 0.06 on the Kaggle public leaderboard (kaggle-virgil-cx-competition)."
+    },
+    {
+      "id": "public25-zerostar-r1",
+      "label": "Zerostar configuration A (R1)",
+      "measurement_date": "2026-10-31",
+      "date_basis": "Run start date (UTC) in the preserved run summary",
+      "protocol": "Kaggle notebook run, not submitted, on the 25 public games; one pass per game under the notebook's non-submission time limit; notebook built on a public community baseline notebook",
+      "evidence_status": "recalculable_summary",
+      "source_record": "preserved per-game benchmark export and run summary",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 102,
+        "full_game_wins": 7,
+        "scoring_games": 24,
+        "score_percent": 42.7498471549122,
+        "median_score_percent": 28.57142857142857,
+        "actions": 5103
+      },
+      "public_table": "public25-per-game.csv",
+      "limitation": "One draw per configuration. Per-game standard deviation was about 24 to 26 points and the paired standard error between configurations about 5 points, so the differences among configurations A, B and C are within run-to-run noise. Configurations are not described here. Configuration A is the configuration submitted as Zerostar attempt 2 (20.27 on the Kaggle public leaderboard). Actions include resets."
+    },
+    {
+      "id": "public25-zerostar-r2",
+      "label": "Zerostar configuration B (R2)",
+      "measurement_date": "2026-10-31",
+      "date_basis": "Run start date (UTC) in the preserved run summary",
+      "protocol": "Kaggle notebook run, not submitted, on the 25 public games; one pass per game under the notebook's non-submission time limit; notebook built on a public community baseline notebook",
+      "evidence_status": "recalculable_summary",
+      "source_record": "preserved per-game benchmark export and run summary",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 105,
+        "full_game_wins": 8,
+        "scoring_games": 24,
+        "score_percent": 46.09970871550715,
+        "median_score_percent": 39.54374712069701,
+        "actions": 5064
+      },
+      "public_table": "public25-per-game.csv",
+      "limitation": "One draw per configuration. Per-game standard deviation was about 24 to 26 points and the paired standard error between configurations about 5 points, so the differences among configurations A, B and C are within run-to-run noise. Configurations are not described here. Actions include resets."
+    },
+    {
+      "id": "public25-zerostar-r3",
+      "label": "Zerostar configuration C (R3)",
+      "measurement_date": "2026-11-01",
+      "date_basis": "Run start date (UTC) in the preserved run summary",
+      "protocol": "Kaggle notebook run, not submitted, on the 25 public games; one pass per game under the notebook's non-submission time limit; notebook built on a public community baseline notebook",
+      "evidence_status": "recalculable_summary",
+      "source_record": "preserved per-game benchmark export and run summary",
+      "metrics": {
+        "games": 25,
+        "levels_total": 183,
+        "levels_completed": 106,
+        "full_game_wins": 7,
+        "scoring_games": 22,
+        "score_percent": 49.50194100364233,
+        "median_score_percent": 47.61904761904761,
+        "actions": 5460
+      },
+      "public_table": "public25-per-game.csv",
+      "limitation": "One draw per configuration. Per-game standard deviation was about 24 to 26 points and the paired standard error between configurations about 5 points, so the differences among configurations A, B and C are within run-to-run noise. Configurations are not described here. Configuration C is the configuration submitted as Zerostar attempt 3 (6.15 on the Kaggle public leaderboard). Actions include resets."
+    },
+    {
+      "id": "0sr-arc1-public-eval",
+      "label": "0SR solver, ARC-AGI-1 public evaluation",
+      "measurement_date": "2026-11-07",
+      "date_basis": "Recorded result of the preserved experiment ledger entry",
+      "protocol": "ARC-AGI-1 public evaluation set, 400 tasks; two attempts per test input, exact match; three identical runs; CPU, one process per task",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved experiment ledger and metrics note of 2026-11-07",
+      "metrics": {
+        "tasks": 400,
+        "solved": 70,
+        "solved_percent": 17.5,
+        "credit": 70.5,
+        "credit_percent": 17.625,
+        "solved_percent_ci95_low": 14.1,
+        "solved_percent_ci95_high": 21.5,
+        "strict_tasks": 399,
+        "strict_solved": 69,
+        "reference_solved": 50,
+        "gain_wins": 20,
+        "gain_losses": 0,
+        "mcnemar_exact_p": 1.9e-06,
+        "secondary_configuration_solved": 68,
+        "cpu_seconds_per_task_mean": 0.376,
+        "cpu_seconds_per_task_max": 3.84,
+        "peak_memory_mb": 161,
+        "runs": 3,
+        "task_runs": 14040,
+        "errors": 0
+      },
+      "limitation": "Sessions before 2026-10-30 inspected the ARC-AGI-1 public evaluation tasks, so the score is descriptive, not held-out. The strict score removes one evaluation task that duplicates a task used in development. The reference is the 2026-11-06 configuration re-run in the same runs; gain and McNemar p compare against it task by task. CPU mean averages three runs; the maximum is over all three. Not scored on ARC Prize hidden sets."
+    },
+    {
+      "id": "0sr-arc2-public-eval",
+      "label": "0SR solver, ARC-AGI-2 public evaluation",
+      "measurement_date": "2026-11-07",
+      "date_basis": "Recorded results of the preserved public run and the overlap audit, both 2026-11-07",
+      "protocol": "ARC-AGI-2 public evaluation set, 120 tasks; two attempts per test input, exact match; three identical runs; CPU, one process per task",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved experiment ledger, overlap audit and metrics note of 2026-11-07",
+      "metrics": {
+        "tasks": 120,
+        "solved": 1,
+        "overlap_tasks_excluded": 7,
+        "tasks_excluding_overlap": 113,
+        "solved_excluding_overlap": 0,
+        "reference_solved": 0,
+        "gain_wins": 1,
+        "gain_losses": 0,
+        "mcnemar_exact_p": 1.0,
+        "cpu_seconds_per_task_mean": 0.605,
+        "cpu_seconds_per_task_max": 4.13,
+        "peak_memory_mb": 266,
+        "runs": 3
+      },
+      "limitation": "Headline is 0 of 113. Seven ARC-AGI-2 evaluation tasks overlap ARC-AGI-1 evaluation (six share a task identifier, one shares an identical example pair); the single raw solve is one of them, so the raw 1 of 120 reflects ARC-AGI-1 content. Not scored on ARC Prize hidden sets."
+    },
+    {
+      "id": "0sr-c-port",
+      "label": "0SR solver, C implementation",
+      "measurement_date": "2026-11-07",
+      "date_basis": "Identity run and size measurements recorded in the preserved ledger on 2026-11-07",
+      "protocol": "answer-for-answer comparison of the C implementation with the recorded Python implementation on both public evaluation sets, three runs; build-size measurement",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved experiment ledger and metrics note of 2026-11-07",
+      "metrics": {
+        "c_source_bytes": 93269,
+        "binary_bytes": 84032,
+        "identity_task_runs": 6240,
+        "differing_answers": 0,
+        "python_reference_task_runs": 12480,
+        "python_reference_errors": 0,
+        "determinism_runs": 3,
+        "configuration_task_pairs_identical_across_runs": 4680,
+        "cpu_ratio_python_to_c_min": 29.5,
+        "cpu_ratio_python_to_c_max": 43.0
+      },
+      "limitation": "Answer identity and the CPU ratio were measured at the 2026-11-06 configuration; sizes are for the 2026-11-07 build (source 83,485 bytes and binary 83,952 bytes at the identity check). Binary is stripped arm64 from one machine and compiler. The CPU ratio compares whole programs, not language speed alone."
+    },
+    {
+      "id": "0sr-arc1-progression",
+      "label": "0SR ARC-AGI-1 public evaluation, gated milestones",
+      "measurement_date": "2026-11-07",
+      "protocol": "ARC-AGI-1 public evaluation (400 tasks, two attempts) scored only at milestone gates",
+      "evidence_status": "documented_historical_aggregate",
+      "source_record": "preserved public-evaluation reports for each gate",
+      "metrics": {
+        "tasks": 400,
+        "points": [
+          {
+            "date": "2026-10-29",
+            "tasks_solved": 10,
+            "label": "first full native run"
+          },
+          {
+            "date": "2026-10-30",
+            "tasks_solved": 34,
+            "label": "Oct 30 gate"
+          },
+          {
+            "date": "2026-11-06",
+            "tasks_solved": 50,
+            "label": "Nov 6 gate"
+          },
+          {
+            "date": "2026-11-07",
+            "tasks_solved": 70,
+            "label": "Nov 7 gate"
+          }
+        ]
+      },
+      "limitation": "Descriptive: the public evaluation set had been inspected during development. Earlier points are earlier versions of the same program."
+    }
+  ]
+}
