@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1232" height="380" viewBox="0 0 1232 380" role="img" aria-labelledby="t d">
+<title id="t">0SR progress on ARC-AGI-1</title>
+<desc id="d">Step chart of tasks solved on the ARC-AGI-1 public evaluation set between late October and early November 2026.</desc>
+<rect width="1232" height="380" rx="20" fill="#10151c" stroke="#232b36"/>
+<text x="32" y="42" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">0SR · ARC-AGI-1 PUBLIC EVALUATION · TASKS SOLVED OF 400</text>
+<path d="M84 316.0H1184" stroke="#232b36" stroke-dasharray="none"/>
+<text x="70" y="320.0" text-anchor="end" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">0</text>
+<path d="M84 255.0H1184" stroke="#232b36" stroke-dasharray="3 5"/>
+<text x="70" y="259.0" text-anchor="end" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">20</text>
+<path d="M84 194.0H1184" stroke="#232b36" stroke-dasharray="3 5"/>
+<text x="70" y="198.0" text-anchor="end" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">40</text>
+<path d="M84 133.0H1184" stroke="#232b36" stroke-dasharray="3 5"/>
+<text x="70" y="137.0" text-anchor="end" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">60</text>
+<path d="M84 72.0H1184" stroke="#232b36" stroke-dasharray="3 5"/>
+<text x="70" y="76.0" text-anchor="end" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">80</text>
+<text x="168.6" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Oct 28</text>
+<text x="337.8" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Oct 30</text>
+<text x="507.1" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Nov 1</text>
+<text x="676.3" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Nov 3</text>
+<text x="845.5" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Nov 5</text>
+<text x="1014.8" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Nov 7</text>
+<text x="1184.0" y="350" text-anchor="middle" fill="#6e7781" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12">Nov 9</text>
+<defs><linearGradient id="fillg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc53d" stop-opacity="0.22"/><stop offset="1" stop-color="#ffc53d" stop-opacity="0"/></linearGradient></defs>
+<path d="M253.2 285.5 H337.8V212.3 H930.2V163.5 H1014.8V102.5 H1178.0V316.0H253.2Z" fill="url(#fillg)"/>
+<path d="M253.2 285.5 H337.8V212.3 H930.2V163.5 H1014.8V102.5 H1178.0" fill="none" stroke="#ffc53d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="253.2" cy="285.5" r="5" fill="#0b0e13" stroke="#ffc53d" stroke-width="3"/>
+<text x="265.2" y="269.5" text-anchor="start" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="700">10</text>
+<text x="265.2" y="311.5" text-anchor="start" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">first full native run</text>
+<circle cx="337.8" cy="212.3" r="5" fill="#0b0e13" stroke="#ffc53d" stroke-width="3"/>
+<text x="349.8" y="196.3" text-anchor="start" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="700">34</text>
+<text x="349.8" y="238.3" text-anchor="start" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">Oct 30 gate</text>
+<circle cx="930.2" cy="163.5" r="5" fill="#0b0e13" stroke="#ffc53d" stroke-width="3"/>
+<text x="942.2" y="147.5" text-anchor="start" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="700">50</text>
+<text x="942.2" y="189.5" text-anchor="start" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">Nov 6 gate</text>
+<circle cx="1014.8" cy="102.5" r="7" fill="#0b0e13" stroke="#ffc53d" stroke-width="3"/>
+<text x="1000.8" y="86.5" text-anchor="end" fill="#f0f3f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700">70</text>
+<text x="1000.8" y="58.5" text-anchor="end" fill="#9da7b3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13">Nov 7 gate</text>
+</svg>

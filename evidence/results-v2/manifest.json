@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "bundle": "results-v2",
+  "published_date": "2026-11-10",
+  "scope": "Aggregate outcomes, leaderboard entries and sanitized per-game measurements only",
+  "raw_source_visibility": "private",
+  "checksums": {
+    "records.json": "53fcb447f6385a982c828562cf1af28ebc9f70d262effb6c1443a7fb4bddb73d",
+    "public25-per-game.csv": "0382d0016246578e3ecb1aa01e62ba67130d0f928efc04efbf224469c1761076",
+    "kaggle-leaderboard.csv": "ff61cfb70a52be20bfcb8c993691db31420ebce57d9399f7d7b8e35502605316"
+  },
+  "excludes": [
+    "solver implementations",
+    "model outputs",
+    "action sequences",
+    "credentials",
+    "submission and scorecard identifiers",
+    "source-machine paths",
+    "detailed tuning configurations",
+    "configuration descriptions",
+    "per-task result lists",
+    "component attributions",
+    "current research plans"
+  ]
+}

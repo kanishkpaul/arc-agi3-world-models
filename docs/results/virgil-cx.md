@@ -37,8 +37,12 @@ Two historical evaluations of Virgil CX use different interaction protocols. Kee
 
 **Supports:** the exact notebook artifact completed the documented public evaluation with limited score and completion. The historical score gate failed. The stronger research-regression score cannot substitute for that failure.
 
+## Reproduced
+
+On September 24, 2026, both evaluations were rerun from frozen copies of the source and reproduced their July results exactly: 2.232680% with 16 levels, and 0.561638% with 17 levels across 14 scoring games. Per-game rows from the reproduction are in [`public25-per-game.csv`](../../evidence/results-v2/public25-per-game.csv) and are recomputed by `scripts/verify_results.py`.
+
 ## Comparing the rows
 
 The difference illustrates why protocols belong next to performance claims. It is not a controlled ablation, and its ratio is not a measured architectural improvement.
 
-The [public summary records](../../evidence/results-v1/records.json) transcribe the preserved phase reports. Full solver code and raw runs remain private, so these aggregate rows are documented rather than independently executable here.
+The [public summary records](../../evidence/results-v1/records.json) transcribe the preserved phase reports. Full solver code and raw runs remain private. The reproduction's per-game tables make the aggregates recalculable; the runs themselves cannot be re-executed from this repository.

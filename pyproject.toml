@@ -1,6 +1,6 @@
 [project]
 name = "arc3-substrate"
-version = "0.1.1"
+version = "0.2.0"
 description = "Offline perception -> logging -> verification substrate for ARC-AGI-3 world-model agents"
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
